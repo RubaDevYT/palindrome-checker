@@ -11,7 +11,10 @@ function checkInput(){
 
     console.log(userInputBackwards);
 
-    if(userInput == userInputBackwards.toLowerCase()){
+    if(userInput == ""){
+    result.innerHTML = `<p>Please don't leave field empty.</p>`
+    }
+    else if(userInput == userInputBackwards.toLowerCase()){
         result.innerHTML = `<p>Yes, <span>'${userInput}'</span> is a palindrome!</p>`
     }else{
         result.innerHTML = `<p>Nope, <span>'${userInput}'</span> is not a palindrome!</p>`
